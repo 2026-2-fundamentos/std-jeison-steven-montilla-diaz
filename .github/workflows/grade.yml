@@ -69,16 +69,14 @@ jobs:
           # -----------------------------------------------------
           # Activity discovery
           # -----------------------------------------------------
-
-          activity_prefixes = ("PRE_", "LAB_")
-
+          activity_prefixes = ("P", "L", "PRE_", "LAB_")
           activities = sorted(
               (
                   directory
                   for directory in repository_root.iterdir()
                   if directory.is_dir()
                   and directory.name.startswith(activity_prefixes)
-                  and (directory / "tests").is_dir()
+                  and ((directory / "tests").is_dir() or (directory / "test").is_dir())
               ),
               key=lambda directory: directory.name,
           )
