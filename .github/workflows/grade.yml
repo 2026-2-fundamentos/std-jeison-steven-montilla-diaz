@@ -69,7 +69,7 @@ jobs:
           # -----------------------------------------------------
           # Activity discovery
           # -----------------------------------------------------
-          activity_prefixes = ("P", "L", "PRE_", "LAB_")
+          activity_prefixes = ("P", "L")
           activities = sorted(
               (
                   directory
