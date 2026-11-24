@@ -1,0 +1,6 @@
+import gzip
+with gzip.open('L101_python_basico/data/data.csv.gz', 'rt') as archivo:
+    cont = 0
+    for linea in archivo:
+        cont+=int(linea.split('\t')[1])
+print(cont)
